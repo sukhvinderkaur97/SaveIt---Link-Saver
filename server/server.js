@@ -2,18 +2,16 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
-const cors = require("cors");
-
-app.use(cors({
-  origin: "https://save-it-link-saver.vercel.app"
-}));
 
 dotenv.config();
 connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://save-it-link-saver.vercel.app"
+}));
+
 app.use(express.json());
 
 app.use("/api/links", require("./routes/linkRoutes"));
