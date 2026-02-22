@@ -4,7 +4,9 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cors = require("cors");
 
-app.use(cors());
+app.use(cors({
+  origin: "https://save-it-link-saver.vercel.app"
+}));
 
 dotenv.config();
 connectDB();
