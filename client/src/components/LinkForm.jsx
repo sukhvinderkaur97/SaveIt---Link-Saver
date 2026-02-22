@@ -49,18 +49,18 @@ function LinkForm({ fetchLinks, categories, setCategories }) {
                     {error}
                 </div>
             )}
-            
+
             <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
                 <input
                     type="text"
-                    placeholder="Website Name"
+                    placeholder="Enter the Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
 
                 <input
                     type="text"
-                    placeholder="Website URL"
+                    placeholder="Enter the URL"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                 />
